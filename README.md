@@ -55,61 +55,61 @@ All devices with firmware major version 4, product name "webOSTV 2.0"
 
 ## Available Commands
 	lgtv scan
-	lgtv --ssl auth <host> MyTV
+	lgtv auth <host> MyTV
 	lgtv setDefault MyTV
-	lgtv --name MyTV --ssl audioStatus
-	lgtv --name MyTV --ssl audioVolume
-	lgtv --name MyTV --ssl closeAlert <alertId>
-	lgtv --name MyTV --ssl closeApp <appid>
-	lgtv --name MyTV --ssl createAlert <message> <button>
-	lgtv --name MyTV --ssl execute <command>
-	lgtv --name MyTV --ssl getCursorSocket
-	lgtv --name MyTV --ssl getForegroundAppInfo
-	lgtv --name MyTV --ssl getPictureSettings
-	lgtv --name MyTV --ssl getPowerState
-	lgtv --name MyTV --ssl getSoundOutput
-	lgtv --name MyTV --ssl getSystemInfo
-	lgtv --name MyTV --ssl getTVChannel
-	lgtv --name MyTV --ssl input3DOff
-	lgtv --name MyTV --ssl input3DOn
-	lgtv --name MyTV --ssl inputChannelDown
-	lgtv --name MyTV --ssl inputChannelUp
-	lgtv --name MyTV --ssl inputMediaFastForward
-	lgtv --name MyTV --ssl inputMediaPause
-	lgtv --name MyTV --ssl inputMediaPlay
-	lgtv --name MyTV --ssl inputMediaRewind
-	lgtv --name MyTV --ssl inputMediaStop
-	lgtv --name MyTV --ssl listApps
-	lgtv --name MyTV --ssl listLaunchPoints
-	lgtv --name MyTV --ssl listChannels
-	lgtv --name MyTV --ssl listInputs
-	lgtv --name MyTV --ssl listServices
-	lgtv --name MyTV --ssl mute <true|false>
-	lgtv --name MyTV --ssl notification <message>
-	lgtv --name MyTV --ssl notificationWithIcon <message> <url>
-	lgtv --name MyTV --ssl off
-	lgtv --name MyTV --ssl on
-	lgtv --name MyTV --ssl openAppWithPayload <payload>
-	lgtv --name MyTV --ssl openBrowserAt <url>
-	lgtv --name MyTV --ssl openYoutubeId <videoid>
-	lgtv --name MyTV --ssl openYoutubeURL <url>
-	lgtv --name MyTV --ssl openYoutubeLegacyId <videoid>
-	lgtv --name MyTV --ssl openYoutubeLegacyURL <url>
-	lgtv --name MyTV --ssl sendButton <button>
-	lgtv --name MyTV --ssl serialise
-	lgtv --name MyTV --ssl setDeviceInfo <id> <icon> <label>
-            # Example: lgtv --name MyTV --ssl setDeviceInfo HDMI_2 hdmi.png "My Input".
+	lgtv --name MyTV audioStatus
+	lgtv --name MyTV audioVolume
+	lgtv --name MyTV closeAlert <alertId>
+	lgtv --name MyTV closeApp <appid>
+	lgtv --name MyTV createAlert <message> <button>
+	lgtv --name MyTV execute <command>
+	lgtv --name MyTV getCursorSocket
+	lgtv --name MyTV getForegroundAppInfo
+	lgtv --name MyTV getPictureSettings
+	lgtv --name MyTV getPowerState
+	lgtv --name MyTV getSoundOutput
+	lgtv --name MyTV getSystemInfo
+	lgtv --name MyTV getTVChannel
+	lgtv --name MyTV input3DOff
+	lgtv --name MyTV input3DOn
+	lgtv --name MyTV inputChannelDown
+	lgtv --name MyTV inputChannelUp
+	lgtv --name MyTV inputMediaFastForward
+	lgtv --name MyTV inputMediaPause
+	lgtv --name MyTV inputMediaPlay
+	lgtv --name MyTV inputMediaRewind
+	lgtv --name MyTV inputMediaStop
+	lgtv --name MyTV listApps
+	lgtv --name MyTV listLaunchPoints
+	lgtv --name MyTV listChannels
+	lgtv --name MyTV listInputs
+	lgtv --name MyTV listServices
+	lgtv --name MyTV mute <true|false>
+	lgtv --name MyTV notification <message>
+	lgtv --name MyTV notificationWithIcon <message> <url>
+	lgtv --name MyTV off
+	lgtv --name MyTV on
+	lgtv --name MyTV openAppWithPayload <payload>
+	lgtv --name MyTV openBrowserAt <url>
+	lgtv --name MyTV openYoutubeId <videoid>
+	lgtv --name MyTV openYoutubeURL <url>
+	lgtv --name MyTV openYoutubeLegacyId <videoid>
+	lgtv --name MyTV openYoutubeLegacyURL <url>
+	lgtv --name MyTV sendButton <button>
+	lgtv --name MyTV serialise
+	lgtv --name MyTV setDeviceInfo <id> <icon> <label>
+            # Example: lgtv --name MyTV setDeviceInfo HDMI_2 hdmi.png "My Input".
             # Purpose: force TV to disable so-called "PC mode" for inputs where the attached device incorrectly or undesiredly signals itself as "PC", eg. Raspberry Pi with LibreELEC.
-	lgtv --name MyTV --ssl setInput <input_id>
-	lgtv --name MyTV --ssl setSoundOutput <tv_speaker|external_optical|external_arc|external_speaker|lineout|headphone|tv_external_speaker|tv_speaker_headphone|bt_soundbar>
-	lgtv --name MyTV --ssl screenOff
-	lgtv --name MyTV --ssl screenOn
-	lgtv --name MyTV --ssl setTVChannel <channelId>
-	lgtv --name MyTV --ssl setVolume <level>
-	lgtv --name MyTV --ssl startApp <appid>
-	lgtv --name MyTV --ssl swInfo
-	lgtv --name MyTV --ssl volumeDown
-	lgtv --name MyTV --ssl volumeUp
+	lgtv --name MyTV setInput <input_id>
+	lgtv --name MyTV setSoundOutput <tv_speaker|external_optical|external_arc|external_speaker|lineout|headphone|tv_external_speaker|tv_speaker_headphone|bt_soundbar>
+	lgtv --name MyTV screenOff
+	lgtv --name MyTV screenOn
+	lgtv --name MyTV setTVChannel <channelId>
+	lgtv --name MyTV setVolume <level>
+	lgtv --name MyTV startApp <appid>
+	lgtv --name MyTV swInfo
+	lgtv --name MyTV volumeDown
+	lgtv --name MyTV volumeUp
 
 ## Install
 
@@ -118,18 +118,18 @@ python-pip (python3-pip for python3) and git are required for the installation p
 
     python -m venv lgtv-venv
     source lgtv-venv/bin/activate
-    pip install git+https://github.com/klattimer/LGWebOSRemote
+    pip install git+https://github.com/OR-6/BetterLGRemote
 
 To install it system wide:
 
 	sudo mkdir -p /opt
 	sudo python -m venv /opt/lgtv-venv
 	source /opt/lgtv-venv/bin/activate
-	sudo pip install git+https://github.com/klattimer/LGWebOSRemote
+	sudo pip install git+https://github.com/OR-6/BetterLGRemote
 
 or with [pipx](https://pipx.pypa.io/stable/):
 
-	pipx install git+https://github.com/klattimer/LGWebOSRemote.git
+	pipx install git+https://github.com/OR-6/BetterLGRemote.git
 
 ## Example usage
     # Scan/Authenticate
@@ -145,38 +145,54 @@ or with [pipx](https://pipx.pypa.io/stable/):
         ],
         "result": "ok"
     }
-    $ lgtv --ssl auth 192.168.1.31 MyTV
+    $ lgtv auth 192.168.1.31 MyTV
     # At this point the TV will request pairing, follow the instructions on screen
 
-    # Commands are basically
-    $ lgtv --name TVNAME --ssl COMMAND COMMAND_ARGS
+    $lgtv --no-ssl auth 192.168.1.100 OldTV
+    # Authenticate without SSL (if needed)
 
-    $ lgtv --name MyTV --ssl on
-    $ lgtv --name MyTV --ssl off
+    # Commands are basically
+    $ lgtv --name TVNAME COMMAND COMMAND_ARGS
+
+    $ lgtv --name MyTV on
+    $ lgtv --name MyTV off
+
+    $lgtv --no-ssl --name OldTV volumeDown
+    # Using --no-ssl (for older TVs)
 
     # If you have the youtube plugin
-    $ lgtv --name MyTV --ssl openYoutubeURL https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    $ lgtv --name MyTV openYoutubeURL https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
     # Otherwise, this works reasonably well
-    $ lgtv --name MyTV --ssl openBrowserAt https://www.youtube.com/tv#/watch?v=dQw4w9WgXcQ
+    $ lgtv --name MyTV openBrowserAt https://www.youtube.com/tv#/watch?v=dQw4w9WgXcQ
 
     # You can set the default TV so the `--name` argument can be skipped
     $ lgtv setDefault MyTV
 
 ## SSL
 
-Starting 25th of January 2023 LG has deprecated insecure ws connections, ssl is now required. Because of this, should you wish to use it on newer firmware devices you can append the argument "ssl" at the back. It connects to 3001 with wss. 
+Starting 25th of January 2023 LG has deprecated insecure ws connections, ssl is now required. Because of this, should you wish to not use it on older firmware devices you can append the argument "no-ssl" at the back. It connects to 3001 with wss, But it wont connect if no-ssl is provided 
 
 ### Example
 ```
 $ lgtv auth 192.168.1.31 MyTV
-$ lgtv --name MyTV --ssl off
-$ lgtv --name MyTV --ssl screenOff
+$ lgtv --name MyTV off
+$ lgtv --name MyTV screenOff
 ```
 
 sendButton args:
 ['asterisk', 'back', 'blue', 'channel_down', 'channel_up', 'click', 'down', 'enter', 'exit', 'fast_forward', 'green', 'home', 'left', 'pause', 'play', 'red', 'rewind', 'right', 'stop', 'up', 'volume_down', 'volume_up', 'yellow']
 
+## Logging Output
+ 
+With `--debug` flag, you'll see detailed information:
+ 
+```
+INFO:root:Scanning network for TV: LivingRoomTV
+INFO:root:Found TV 'LivingRoomTV' at new IP: 192.168.1.105
+INFO:root:Updated IP for 'LivingRoomTV' from 192.168.1.100 to 192.168.1.105 in /home/user/.config/lgtv/config.json
+INFO:root:Retrying with new IP: 192.168.1.105
+```
 
 ## Caveats
 

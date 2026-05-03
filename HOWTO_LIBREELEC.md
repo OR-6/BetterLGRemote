@@ -23,7 +23,7 @@ FROM python:3.12
 ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-RUN . /opt/venv/bin/activate && pip install git+https://github.com/klattimer/LGWebOSRemote
+RUN . /opt/venv/bin/activate && pip install git+https://github.com/OR-6/BetterLGRemote
 RUN mkdir -m 777 -p /opt/venvs/lgtv/config
 RUN echo '{"mytv" : {"ip": "10.0.0.69", "client-key": "", "mac-address": "34:e6:e6:a5:c8:3c"}}' > /opt/venvs/lgtv/config/config.json
 RUN useradd app
